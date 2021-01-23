@@ -1,2 +1,2 @@
 # MiniProjects
-Collection Of Mini Projects 
+Collection of mini projects used to help build bigger and more robust applications. 
