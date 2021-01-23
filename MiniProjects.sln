@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30717.126
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MiniProjects", "MiniProjects\MiniProjects.csproj", "{073E17F0-5E88-40CF-A2F6-C97147E1AF95}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReadWriteToTextFile", "ReadWriteToTextFile\ReadWriteToTextFile.csproj", "{EDBEC7C4-3AD8-4261-AB24-ABFD3A7612BA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{073E17F0-5E88-40CF-A2F6-C97147E1AF95}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{073E17F0-5E88-40CF-A2F6-C97147E1AF95}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{073E17F0-5E88-40CF-A2F6-C97147E1AF95}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{073E17F0-5E88-40CF-A2F6-C97147E1AF95}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EDBEC7C4-3AD8-4261-AB24-ABFD3A7612BA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EDBEC7C4-3AD8-4261-AB24-ABFD3A7612BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EDBEC7C4-3AD8-4261-AB24-ABFD3A7612BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EDBEC7C4-3AD8-4261-AB24-ABFD3A7612BA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {00902307-184B-4417-B94A-3DDB86C9BB27}
+	EndGlobalSection
+EndGlobal
