@@ -79,5 +79,11 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DataConnectorLibrary\DataConnectorLibrary.csproj">
+      <Project>{bd608e6c-98f5-4bed-83cd-26b524adc3f8}</Project>
+      <Name>DataConnectorLibrary</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

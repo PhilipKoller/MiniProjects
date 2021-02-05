@@ -31,22 +31,23 @@ namespace DataConnector
         {
             this.usernameTextBox = new System.Windows.Forms.TextBox();
             this.submitButton = new System.Windows.Forms.Button();
-            this.connectionTypeListBox = new System.Windows.Forms.ListBox();
             this.saveTypeLabel = new System.Windows.Forms.Label();
             this.passwordTextBox = new System.Windows.Forms.TextBox();
             this.emailTextBox = new System.Windows.Forms.TextBox();
+            this.textFileCheckBox = new System.Windows.Forms.CheckBox();
+            this.sqlTextBox = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // usernameTextBox
             // 
             this.usernameTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.usernameTextBox.Font = new System.Drawing.Font("Segoe UI Semilight", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.usernameTextBox.Location = new System.Drawing.Point(133, 38);
+            this.usernameTextBox.Location = new System.Drawing.Point(133, 37);
             this.usernameTextBox.Margin = new System.Windows.Forms.Padding(13, 14, 13, 14);
             this.usernameTextBox.Name = "usernameTextBox";
             this.usernameTextBox.Size = new System.Drawing.Size(764, 93);
             this.usernameTextBox.TabIndex = 0;
-            this.usernameTextBox.Text = "User Name";
+            this.usernameTextBox.Text = "Username";
             // 
             // submitButton
             // 
@@ -56,30 +57,20 @@ namespace DataConnector
             this.submitButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.submitButton.Font = new System.Drawing.Font("Segoe UI Semilight", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.submitButton.ForeColor = System.Drawing.Color.Black;
-            this.submitButton.Location = new System.Drawing.Point(165, 555);
+            this.submitButton.Location = new System.Drawing.Point(163, 594);
             this.submitButton.Margin = new System.Windows.Forms.Padding(13, 14, 13, 14);
             this.submitButton.Name = "submitButton";
             this.submitButton.Size = new System.Drawing.Size(654, 154);
             this.submitButton.TabIndex = 4;
             this.submitButton.Text = "Submit";
             this.submitButton.UseVisualStyleBackColor = true;
-            // 
-            // connectionTypeListBox
-            // 
-            this.connectionTypeListBox.Font = new System.Drawing.Font("Segoe UI Semilight", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.connectionTypeListBox.FormattingEnabled = true;
-            this.connectionTypeListBox.ItemHeight = 65;
-            this.connectionTypeListBox.Location = new System.Drawing.Point(516, 451);
-            this.connectionTypeListBox.Name = "connectionTypeListBox";
-            this.connectionTypeListBox.Size = new System.Drawing.Size(352, 69);
-            this.connectionTypeListBox.TabIndex = 3;
-           
+            this.submitButton.Click += new System.EventHandler(this.submitButton_Click);
             // 
             // saveTypeLabel
             // 
             this.saveTypeLabel.AutoSize = true;
             this.saveTypeLabel.Font = new System.Drawing.Font("Segoe UI Semilight", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.saveTypeLabel.Location = new System.Drawing.Point(230, 455);
+            this.saveTypeLabel.Location = new System.Drawing.Point(269, 464);
             this.saveTypeLabel.Name = "saveTypeLabel";
             this.saveTypeLabel.Size = new System.Drawing.Size(245, 65);
             this.saveTypeLabel.TabIndex = 22;
@@ -107,16 +98,41 @@ namespace DataConnector
             this.emailTextBox.TabIndex = 2;
             this.emailTextBox.Text = "Email";
             // 
+            // textFileCheckBox
+            // 
+            this.textFileCheckBox.AutoSize = true;
+            this.textFileCheckBox.Checked = true;
+            this.textFileCheckBox.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.textFileCheckBox.Font = new System.Drawing.Font("Segoe UI Semilight", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textFileCheckBox.Location = new System.Drawing.Point(537, 432);
+            this.textFileCheckBox.Name = "textFileCheckBox";
+            this.textFileCheckBox.Size = new System.Drawing.Size(211, 69);
+            this.textFileCheckBox.TabIndex = 23;
+            this.textFileCheckBox.Text = "Text File";
+            this.textFileCheckBox.UseVisualStyleBackColor = true;
+            // 
+            // sqlTextBox
+            // 
+            this.sqlTextBox.AutoSize = true;
+            this.sqlTextBox.Font = new System.Drawing.Font("Segoe UI Semilight", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.sqlTextBox.Location = new System.Drawing.Point(537, 490);
+            this.sqlTextBox.Name = "sqlTextBox";
+            this.sqlTextBox.Size = new System.Drawing.Size(335, 69);
+            this.sqlTextBox.TabIndex = 24;
+            this.sqlTextBox.Text = "SQL Database";
+            this.sqlTextBox.UseVisualStyleBackColor = true;
+            // 
             // DataConnectorForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(27F, 65F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(985, 802);
+            this.Controls.Add(this.sqlTextBox);
+            this.Controls.Add(this.textFileCheckBox);
             this.Controls.Add(this.emailTextBox);
             this.Controls.Add(this.passwordTextBox);
             this.Controls.Add(this.saveTypeLabel);
-            this.Controls.Add(this.connectionTypeListBox);
             this.Controls.Add(this.submitButton);
             this.Controls.Add(this.usernameTextBox);
             this.Font = new System.Drawing.Font("Segoe UI", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -132,10 +148,11 @@ namespace DataConnector
 
         private System.Windows.Forms.TextBox usernameTextBox;
         private System.Windows.Forms.Button submitButton;
-        private System.Windows.Forms.ListBox connectionTypeListBox;
         private System.Windows.Forms.Label saveTypeLabel;
         private System.Windows.Forms.TextBox passwordTextBox;
         private System.Windows.Forms.TextBox emailTextBox;
+        private System.Windows.Forms.CheckBox textFileCheckBox;
+        private System.Windows.Forms.CheckBox sqlTextBox;
     }
 }
 
