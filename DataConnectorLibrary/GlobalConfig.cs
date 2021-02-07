@@ -1,6 +1,7 @@
 ﻿using DataConnectorLibrary.DataAccess;
 using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -14,16 +15,22 @@ namespace DataConnectorLibrary
     
     public static void InitializeConnections(DatabaseType db)
         {
-            if (true)
+            switch (db)
             {
-                // if text file is true then Instatiate textfileconnector class 
+                case DatabaseType.TextFile:
+                    TextConnector text = new TextConnector();
+                    Connections = text;
+                    break;
+                case DatabaseType.Sql:
+                    break;
+                default:
+                    break;
             }
+        }
 
-            if (true)
-            {
-                // if sql is true then Instatiate sqlconnector class
-            }
-
+        public static string CnnString(string name)
+        {
+            return ConfigurationManager.ConnectionStrings[name].ConnectionString;
         }
     }
 }

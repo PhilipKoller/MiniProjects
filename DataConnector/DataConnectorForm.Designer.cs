@@ -86,6 +86,8 @@ namespace DataConnector
             this.passwordTextBox.Size = new System.Drawing.Size(764, 93);
             this.passwordTextBox.TabIndex = 1;
             this.passwordTextBox.Text = "Password";
+            this.passwordTextBox.Click += new System.EventHandler(this.passwordTextBox_Click);
+            this.passwordTextBox.TextChanged += new System.EventHandler(this.passwordTextBox_TextChanged);
             // 
             // emailTextBox
             // 

@@ -4,8 +4,7 @@ using System.Collections.Generic;
 using System.Configuration;
 using System.IO;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
 
 namespace DataConnectorLibrary.DataAccess
 {
@@ -25,8 +24,9 @@ namespace DataConnectorLibrary.DataAccess
             {
                 string[] cols = line.Split(',');
                 UserModel model = new UserModel();
-                model.Username = cols[0];
-                model.Password = cols[1];
+                model.Id = Int32.Parse(cols[0]);
+                model.Username = cols[1];
+                model.Password = cols[2];
                 model.Email = cols[3];
                 output.Add(model);
             }
@@ -35,7 +35,24 @@ namespace DataConnectorLibrary.DataAccess
 
         public static List<string> LoadFile(this string file)
         {
-            
+            if (!File.Exists(file))
+            {
+                return new List<string>();
+            }
+            return File.ReadAllLines(file).ToList();
+        }
+
+        public static void SaveToUserFile(this List<UserModel> users, string fileName)
+        {
+            List<string> lines = new List<string>();
+
+            foreach (UserModel p in users)
+            {
+                lines.Add($"{p.Id},{p.Username},{p.Password},{p.Email}");
+            }
+
+            File.WriteAllLines(fileName.FullFilePath(), lines);
+           
         }
     }
 }

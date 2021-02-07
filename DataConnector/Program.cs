@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DataConnectorLibrary.DataAccess;
 
 namespace DataConnector
 {
@@ -16,7 +17,10 @@ namespace DataConnector
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+            DataConnectorLibrary.GlobalConfig.InitializeConnections(DataConnectorLibrary.DatabaseType.TextFile);
             Application.Run(new DataConnectorForm());
+
+          
         }
     }
 }
