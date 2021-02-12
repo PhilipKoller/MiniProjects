@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataConnector", "DataConnec
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataConnectorLibrary", "DataConnectorLibrary\DataConnectorLibrary.csproj", "{BD608E6C-98F5-4BED-83CD-26B524ADC3F8}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AnimateAscii", "AnimateAscii\AnimateAscii.csproj", "{22113172-CDBD-44D7-93A4-BCBAFE104011}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{BD608E6C-98F5-4BED-83CD-26B524ADC3F8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BD608E6C-98F5-4BED-83CD-26B524ADC3F8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BD608E6C-98F5-4BED-83CD-26B524ADC3F8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{22113172-CDBD-44D7-93A4-BCBAFE104011}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{22113172-CDBD-44D7-93A4-BCBAFE104011}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{22113172-CDBD-44D7-93A4-BCBAFE104011}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{22113172-CDBD-44D7-93A4-BCBAFE104011}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
