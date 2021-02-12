@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Threading;
 
 namespace AnimateAscii
 {
@@ -6,7 +7,25 @@ namespace AnimateAscii
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Animate.LoadAscii();
+            SetConsole();
+
+            while (true)
+            {
+                Thread.Sleep(50);
+                Animate.UpdateProgress();
+            }
+            
+        }
+        private static void SetConsole()
+        {
+            // Sets Console window 
+            Console.WindowHeight = 63;
+            Console.WindowWidth = 89;
+
+            Console.SetBufferSize(220, 242);
         }
     }
+
+    
 }
