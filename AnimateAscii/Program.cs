@@ -12,6 +12,7 @@ namespace AnimateAscii
 
             while (true)
             {
+
                 Thread.Sleep(50);
                 Animate.UpdateProgress();
             }
