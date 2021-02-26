@@ -10,14 +10,19 @@ namespace AnimateAscii
         {
             Animate.LoadAscii();
             SetConsole();
-            GetUserInput();
+
 
             while (true)
             {
                 Thread.Sleep(50);
                 Animate.UpdateProgress();
+                if (Console.KeyAvailable)
+                {
+                    GetUserInput();
+                }
+
             }
-            
+
         }
         private static void SetConsole()
         {
@@ -27,22 +32,38 @@ namespace AnimateAscii
 
             Console.SetBufferSize(220, 242);
         }
+       
         public static async void GetUserInput()
         {
             // Allows user to type whithout freexing the UI 
             var t = Task.Run(async delegate
-            {
-                int userNumber = Int32.Parse(Console.ReadLine());
-                if (userNumber == 1)
-                {
-                    //CHANGES AND RESETS ANIMATION FRAME COUNTER
-                    Animate._currentFrame = 0;
-                    Animate._animationNum = 1;
+            { 
+            Restart:
+                try
+                { 
+                    int userInput = Int32.Parse(Console.ReadLine());
+                        if (userInput == 1)
+                        {
+                            Animate.ChangeAnimation("FirstScene");
+
+                        }
+                        if (userInput == 3)
+                        {
+                            Animate.ChangeAnimation("SecondScene");
+                        }
+                    
                 }
+                catch (Exception ex)
+                {
+                    Console.Clear();
+                    goto Restart;
+                    throw;
+                }
+
             });
         }
-        
-        }
 
-    
+    }
+
+
 }

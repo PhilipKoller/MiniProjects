@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Text;
 
+
 namespace AnimateAscii
 {
     static class Animate
@@ -10,9 +11,27 @@ namespace AnimateAscii
         // List of List form multiple animations 
         private static List<List<string>> mettatonAnimations = new List<List<string>>();
 
-        public static int _currentFrame { get; set; }
-        public static int _animationNum { get; set; }
+        private static int _currentFrame { get; set; }
+        private static int _animationNum { get; set; }
 
+        public static void ChangeAnimation(string name)
+        {
+            
+           // CHANGES AND RESETS ANIMATION FRAME COUNTER
+           
+            if (name == "FirstScene")
+            {
+                _animationNum = 0;
+            }
+            if (name == "SecondScene")
+            {
+                _animationNum = 1;
+            }
+            _currentFrame = 0;
+            Console.Clear();
+        
+
+        }
         public static void UpdateProgress()
         {
 
